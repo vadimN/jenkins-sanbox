@@ -4,10 +4,8 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                script {
-                    sh 'curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -'
-                    sh 'sudo apt install -y nodejs'
-                }
+                sh 'curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -'
+                sh 'sudo apt install -y nodejs'
             }
         }
 
